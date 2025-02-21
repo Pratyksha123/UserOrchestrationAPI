@@ -18,6 +18,16 @@ public class User {
     private String email;
     private String ssn;
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    private String image;
+
 
 
 
