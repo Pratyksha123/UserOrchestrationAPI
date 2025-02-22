@@ -13,10 +13,11 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
-import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
-import io.github.resilience4j.retry.annotation.Retry;
+//import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+//import io.github.resilience4j.retry.annotation.Retry;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -40,8 +41,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Cacheable(value = "users")
-    @CircuitBreaker(name = "userService", fallbackMethod = "fallbackGetUsers")
-    @Retry(name = "userService", fallbackMethod = "fallbackGetUsers")
+//    @CircuitBreaker(name = "userService", fallbackMethod = "fallbackGetUsers")
+//    @Retry(name = "userService", fallbackMethod = "fallbackGetUsers")
     public void loadUsers() {
         OuterDTO outerDto = null;
         int retryAttempts = retryConfig; // Store retry value in a local variable to avoid unintended side effects.
@@ -71,7 +72,9 @@ public class UserServiceImpl implements UserService {
             throw new ExternalApiException("Failed to load users from external API after " + retryConfig + " attempts");
         }
     }
-
+    public void fallbackGetUsers(Throwable t) {
+        logger.error("Fallback method executed. Unable to load users.", t);
+    }
     private User convertUserDTOToUser(UserDTO userDto) {
         return new User(
                 userDto.getId(),
