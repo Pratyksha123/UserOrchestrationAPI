@@ -59,7 +59,7 @@ public class UserController {
      */
     @GetMapping("/searchByNamePrefix")
     @Operation(summary = "Search user", description = "Searches for a user based on their name and ssn")
-    public ResponseEntity<List<User>> searchByNamePrefix(@RequestParam String prefix)  throws UserNotFoundException{
+    public ResponseEntity<List<User>> searchByNamePrefix(@RequestParam("prefix") String prefix)  throws UserNotFoundException{
         List<User> user = userService.searchByNameOrSsnPrefix(prefix);
         return new ResponseEntity<>(user, HttpStatus.OK);
     }
