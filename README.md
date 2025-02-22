@@ -94,7 +94,7 @@ JDBC URL: jdbc:h2:mem:testdb
 
 Username: sa
 
-Password: (empty)
+Password: password
 
 ### Notes
 
