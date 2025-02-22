@@ -37,7 +37,7 @@ class UserControllerTest {
     @Test
     void testGetUserByEmail() {
         when(userService.findUserByEmail("test@example.com")).thenReturn(user);
-        ResponseEntity<User> response = userController.getUserByEmail("test@example.com");
+        ResponseEntity<User> response = userController.searchByEmail("test@example.com");
         assertEquals(200, response.getStatusCodeValue());
         assertEquals("test@example.com", response.getBody().getEmail());
     }

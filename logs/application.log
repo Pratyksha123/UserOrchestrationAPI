@@ -2177,3 +2177,445 @@ java.lang.NoSuchMethodError: 'void org.springframework.web.method.ControllerAdvi
 2025-02-22T16:38:51.897+05:30  WARN 21580 --- [UserOrchestrationAPI] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
 2025-02-22T16:38:51.898+05:30  INFO 21580 --- [UserOrchestrationAPI] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-02-22T16:38:51.901+05:30  INFO 21580 --- [UserOrchestrationAPI] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-22T17:09:09.306+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] c.e.u.UserOrchestrationApiApplication    : Starting UserOrchestrationApiApplication using Java 23.0.1 with PID 34624 (C:\Users\user\IdeaProjects\UserOrchestrationAPI\target\classes started by user in C:\Users\user\IdeaProjects\UserOrchestrationAPI)
+2025-02-22T17:09:09.307+05:30 DEBUG 34624 --- [UserOrchestrationAPI] [restartedMain] c.e.u.UserOrchestrationApiApplication    : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-22T17:09:09.308+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] c.e.u.UserOrchestrationApiApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-02-22T17:09:09.379+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-22T17:09:09.379+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-02-22T17:09:10.050+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-22T17:09:10.097+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 1 JPA repository interface.
+2025-02-22T17:09:10.559+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-22T17:09:10.570+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-22T17:09:10.570+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-22T17:09:10.606+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-22T17:09:10.607+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1227 ms
+2025-02-22T17:09:10.688+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-22T17:09:10.826+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-02-22T17:09:10.828+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-22T17:09:10.878+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-22T17:09:10.923+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-02-22T17:09:10.952+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-22T17:09:11.194+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-22T17:09:11.229+05:30  WARN 34624 --- [UserOrchestrationAPI] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-22T17:09:11.241+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-22T17:09:11.881+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-22T17:09:11.908+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-22T17:09:12.110+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-02-22T17:09:12.786+05:30  WARN 34624 --- [UserOrchestrationAPI] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-22T17:09:13.079+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-02-22T17:09:13.145+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-22T17:09:13.194+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-22T17:09:13.202+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] c.e.u.UserOrchestrationApiApplication    : Started UserOrchestrationApiApplication in 4.264 seconds (process running for 4.887)
+2025-02-22T17:09:15.202+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] c.e.u.services.UserServiceImpl           : Successfully loaded 30 users into the database.
+2025-02-22T17:09:15.204+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] c.e.u.event.StartupEventListener         : API Data Fetched and Stored
+2025-02-22T17:09:22.760+05:30  INFO 34624 --- [UserOrchestrationAPI] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 22 class path changes (0 additions, 21 deletions, 1 modification)
+2025-02-22T17:09:22.764+05:30  INFO 34624 --- [UserOrchestrationAPI] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-22T17:09:22.771+05:30  INFO 34624 --- [UserOrchestrationAPI] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-22T17:09:22.775+05:30  INFO 34624 --- [UserOrchestrationAPI] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-22T17:09:22.783+05:30  WARN 34624 --- [UserOrchestrationAPI] [Thread-5] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2025-02-22T17:09:22.784+05:30  INFO 34624 --- [UserOrchestrationAPI] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-22T17:09:22.786+05:30  INFO 34624 --- [UserOrchestrationAPI] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-22T17:09:22.889+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] c.e.u.UserOrchestrationApiApplication    : Starting UserOrchestrationApiApplication using Java 23.0.1 with PID 34624 (C:\Users\user\IdeaProjects\UserOrchestrationAPI\target\classes started by user in C:\Users\user\IdeaProjects\UserOrchestrationAPI)
+2025-02-22T17:09:22.890+05:30 DEBUG 34624 --- [UserOrchestrationAPI] [restartedMain] c.e.u.UserOrchestrationApiApplication    : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-22T17:09:22.890+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] c.e.u.UserOrchestrationApiApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-02-22T17:09:23.141+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-22T17:09:23.143+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2025-02-22T17:09:23.245+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-22T17:09:23.246+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-22T17:09:23.246+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-22T17:09:23.268+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-22T17:09:23.269+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 375 ms
+2025-02-22T17:09:23.304+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-02-22T17:09:23.306+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2025-02-22T17:09:23.306+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-02-22T17:09:23.311+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-22T17:09:23.314+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-22T17:09:23.324+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-22T17:09:23.325+05:30  WARN 34624 --- [UserOrchestrationAPI] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-22T17:09:23.326+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-22T17:09:23.343+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-22T17:09:23.343+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-22T17:09:23.417+05:30  WARN 34624 --- [UserOrchestrationAPI] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-22T17:09:23.532+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-02-22T17:09:23.541+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-22T17:09:23.551+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-22T17:09:23.556+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] c.e.u.UserOrchestrationApiApplication    : Started UserOrchestrationApiApplication in 0.703 seconds (process running for 15.241)
+2025-02-22T17:09:23.558+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-02-22T17:09:24.966+05:30  INFO 34624 --- [UserOrchestrationAPI] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 21 class path changes (21 additions, 0 deletions, 0 modifications)
+2025-02-22T17:09:24.968+05:30  INFO 34624 --- [UserOrchestrationAPI] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-22T17:09:24.978+05:30  INFO 34624 --- [UserOrchestrationAPI] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-22T17:09:24.982+05:30  INFO 34624 --- [UserOrchestrationAPI] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-22T17:09:24.984+05:30  WARN 34624 --- [UserOrchestrationAPI] [Thread-7] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2025-02-22T17:09:24.984+05:30  INFO 34624 --- [UserOrchestrationAPI] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-02-22T17:09:24.985+05:30  INFO 34624 --- [UserOrchestrationAPI] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-02-22T17:09:25.082+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] c.e.u.UserOrchestrationApiApplication    : Starting UserOrchestrationApiApplication using Java 23.0.1 with PID 34624 (C:\Users\user\IdeaProjects\UserOrchestrationAPI\target\classes started by user in C:\Users\user\IdeaProjects\UserOrchestrationAPI)
+2025-02-22T17:09:25.082+05:30 DEBUG 34624 --- [UserOrchestrationAPI] [restartedMain] c.e.u.UserOrchestrationApiApplication    : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-22T17:09:25.083+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] c.e.u.UserOrchestrationApiApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-02-22T17:09:25.425+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-22T17:09:25.441+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 1 JPA repository interface.
+2025-02-22T17:09:25.579+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-22T17:09:25.580+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-22T17:09:25.580+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-22T17:09:25.600+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-22T17:09:25.600+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 514 ms
+2025-02-22T17:09:25.635+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-02-22T17:09:25.637+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:testdb user=SA
+2025-02-22T17:09:25.637+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-02-22T17:09:25.646+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-22T17:09:25.649+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-22T17:09:25.661+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-22T17:09:25.667+05:30  WARN 34624 --- [UserOrchestrationAPI] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-22T17:09:25.668+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-22T17:09:25.709+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-22T17:09:25.711+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-22T17:09:25.799+05:30  WARN 34624 --- [UserOrchestrationAPI] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-22T17:09:25.865+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-02-22T17:09:25.873+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-22T17:09:25.885+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-22T17:09:25.887+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] c.e.u.UserOrchestrationApiApplication    : Started UserOrchestrationApiApplication in 0.835 seconds (process running for 17.573)
+2025-02-22T17:09:25.888+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-02-22T17:09:27.678+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] c.e.u.services.UserServiceImpl           : Successfully loaded 30 users into the database.
+2025-02-22T17:09:27.678+05:30  INFO 34624 --- [UserOrchestrationAPI] [restartedMain] c.e.u.event.StartupEventListener         : API Data Fetched and Stored
+2025-02-22T17:24:02.005+05:30  INFO 34624 --- [UserOrchestrationAPI] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-22T17:24:02.011+05:30  INFO 34624 --- [UserOrchestrationAPI] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-22T17:24:02.011+05:30  INFO 34624 --- [UserOrchestrationAPI] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-22T17:24:02.011+05:30  WARN 34624 --- [UserOrchestrationAPI] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2025-02-22T17:24:02.011+05:30  INFO 34624 --- [UserOrchestrationAPI] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-02-22T17:24:02.011+05:30  INFO 34624 --- [UserOrchestrationAPI] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-02-22T17:28:06.414+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] c.e.u.UserOrchestrationApiApplication    : Starting UserOrchestrationApiApplication using Java 23.0.1 with PID 3868 (C:\Users\user\IdeaProjects\UserOrchestrationAPI\target\classes started by user in C:\Users\user\IdeaProjects\UserOrchestrationAPI)
+2025-02-22T17:28:06.416+05:30 DEBUG 3868 --- [UserOrchestrationAPI] [restartedMain] c.e.u.UserOrchestrationApiApplication    : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-22T17:28:06.416+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] c.e.u.UserOrchestrationApiApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-02-22T17:28:06.474+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-22T17:28:06.475+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-02-22T17:28:07.137+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-22T17:28:07.179+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 1 JPA repository interface.
+2025-02-22T17:28:07.947+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-22T17:28:07.958+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-22T17:28:07.958+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-22T17:28:07.994+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-22T17:28:07.995+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1520 ms
+2025-02-22T17:28:08.132+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-22T17:28:08.270+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-02-22T17:28:08.279+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-22T17:28:08.324+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-22T17:28:08.366+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-02-22T17:28:08.389+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-22T17:28:08.585+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-22T17:28:08.620+05:30  WARN 3868 --- [UserOrchestrationAPI] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-22T17:28:08.631+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-22T17:28:09.228+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-22T17:28:09.253+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-22T17:28:09.579+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-02-22T17:28:10.394+05:30  WARN 3868 --- [UserOrchestrationAPI] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-22T17:28:11.159+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-02-22T17:28:11.260+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-22T17:28:11.310+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-22T17:28:11.321+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] c.e.u.UserOrchestrationApiApplication    : Started UserOrchestrationApiApplication in 5.261 seconds (process running for 6.193)
+2025-02-22T17:28:11.341+05:30  WARN 3868 --- [UserOrchestrationAPI] [restartedMain] i.g.r.spring6.fallback.FallbackExecutor  : No fallback method match found
+
+java.lang.NoSuchMethodException: void class com.example.userorchestrationapi.services.UserServiceImpl.fallbackGetUsers(,class java.lang.Throwable)
+	at io.github.resilience4j.spring6.fallback.FallbackMethod.create(FallbackMethod.java:97) ~[resilience4j-spring6-2.2.0.jar:2.2.0]
+	at io.github.resilience4j.spring6.fallback.FallbackExecutor.execute(FallbackExecutor.java:31) ~[resilience4j-spring6-2.2.0.jar:2.2.0]
+	at io.github.resilience4j.spring6.retry.configure.RetryAspect.retryAroundAdvice(RetryAspect.java:117) ~[resilience4j-spring6-2.2.0.jar:2.2.0]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:638) ~[spring-aop-6.2.2.jar:6.2.2]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:628) ~[spring-aop-6.2.2.jar:6.2.2]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71) ~[spring-aop-6.2.2.jar:6.2.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:173) ~[spring-aop-6.2.2.jar:6.2.2]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.2.2.jar:6.2.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.2.jar:6.2.2]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727) ~[spring-aop-6.2.2.jar:6.2.2]
+	at com.example.userorchestrationapi.services.UserServiceImpl$$SpringCGLIB$$0.loadUsers(<generated>) ~[classes/:na]
+	at com.example.userorchestrationapi.event.StartupEventListener.callApiOnStartup(StartupEventListener.java:23) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:382) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:254) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:173) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:454) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.boot.context.event.EventPublishingRunListener.ready(EventPublishingRunListener.java:109) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$ready$6(SpringApplicationRunListeners.java:80) ~[spring-boot-3.4.2.jar:3.4.2]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplicationRunListeners.ready(SpringApplicationRunListeners.java:80) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:332) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.2.jar:3.4.2]
+	at com.example.userorchestrationapi.UserOrchestrationApiApplication.main(UserOrchestrationApiApplication.java:18) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.4.2.jar:3.4.2]
+
+2025-02-22T17:28:11.362+05:30  WARN 3868 --- [UserOrchestrationAPI] [restartedMain] i.g.r.spring6.fallback.FallbackExecutor  : No fallback method match found
+
+java.lang.NoSuchMethodException: void class com.example.userorchestrationapi.services.UserServiceImpl.fallbackGetUsers(,class java.lang.Throwable)
+	at io.github.resilience4j.spring6.fallback.FallbackMethod.create(FallbackMethod.java:97) ~[resilience4j-spring6-2.2.0.jar:2.2.0]
+	at io.github.resilience4j.spring6.fallback.FallbackExecutor.execute(FallbackExecutor.java:31) ~[resilience4j-spring6-2.2.0.jar:2.2.0]
+	at io.github.resilience4j.spring6.circuitbreaker.configure.CircuitBreakerAspect.circuitBreakerAroundAdvice(CircuitBreakerAspect.java:109) ~[resilience4j-spring6-2.2.0.jar:2.2.0]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:638) ~[spring-aop-6.2.2.jar:6.2.2]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:628) ~[spring-aop-6.2.2.jar:6.2.2]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71) ~[spring-aop-6.2.2.jar:6.2.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:173) ~[spring-aop-6.2.2.jar:6.2.2]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89) ~[spring-aop-6.2.2.jar:6.2.2]
+	at io.github.resilience4j.retry.Retry.lambda$decorateCheckedSupplier$1(Retry.java:135) ~[resilience4j-retry-2.2.0.jar:2.2.0]
+	at io.github.resilience4j.retry.Retry.executeCheckedSupplier(Retry.java:350) ~[resilience4j-retry-2.2.0.jar:2.2.0]
+	at io.github.resilience4j.spring6.retry.configure.RetryAspect.handleDefaultJoinPoint(RetryAspect.java:175) ~[resilience4j-spring6-2.2.0.jar:2.2.0]
+	at io.github.resilience4j.spring6.retry.configure.RetryAspect.proceed(RetryAspect.java:132) ~[resilience4j-spring6-2.2.0.jar:2.2.0]
+	at io.github.resilience4j.spring6.retry.configure.RetryAspect.lambda$retryAroundAdvice$0(RetryAspect.java:116) ~[resilience4j-spring6-2.2.0.jar:2.2.0]
+	at io.github.resilience4j.spring6.fallback.FallbackExecutor.execute(FallbackExecutor.java:37) ~[resilience4j-spring6-2.2.0.jar:2.2.0]
+	at io.github.resilience4j.spring6.retry.configure.RetryAspect.retryAroundAdvice(RetryAspect.java:117) ~[resilience4j-spring6-2.2.0.jar:2.2.0]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:638) ~[spring-aop-6.2.2.jar:6.2.2]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:628) ~[spring-aop-6.2.2.jar:6.2.2]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71) ~[spring-aop-6.2.2.jar:6.2.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:173) ~[spring-aop-6.2.2.jar:6.2.2]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.2.2.jar:6.2.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.2.jar:6.2.2]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727) ~[spring-aop-6.2.2.jar:6.2.2]
+	at com.example.userorchestrationapi.services.UserServiceImpl$$SpringCGLIB$$0.loadUsers(<generated>) ~[classes/:na]
+	at com.example.userorchestrationapi.event.StartupEventListener.callApiOnStartup(StartupEventListener.java:23) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:382) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:254) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:173) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:454) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.boot.context.event.EventPublishingRunListener.ready(EventPublishingRunListener.java:109) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$ready$6(SpringApplicationRunListeners.java:80) ~[spring-boot-3.4.2.jar:3.4.2]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplicationRunListeners.ready(SpringApplicationRunListeners.java:80) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:332) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.2.jar:3.4.2]
+	at com.example.userorchestrationapi.UserOrchestrationApiApplication.main(UserOrchestrationApiApplication.java:18) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.4.2.jar:3.4.2]
+
+2025-02-22T17:28:13.585+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] c.e.u.services.UserServiceImpl           : Successfully loaded 30 users into the database.
+2025-02-22T17:28:13.589+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] c.e.u.event.StartupEventListener         : API Data Fetched and Stored
+2025-02-22T17:28:56.901+05:30  INFO 3868 --- [UserOrchestrationAPI] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 22 class path changes (0 additions, 21 deletions, 1 modification)
+2025-02-22T17:28:56.907+05:30  INFO 3868 --- [UserOrchestrationAPI] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-22T17:28:56.914+05:30  INFO 3868 --- [UserOrchestrationAPI] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-22T17:28:56.920+05:30  INFO 3868 --- [UserOrchestrationAPI] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-22T17:28:56.927+05:30  WARN 3868 --- [UserOrchestrationAPI] [Thread-5] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2025-02-22T17:28:56.927+05:30  INFO 3868 --- [UserOrchestrationAPI] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-22T17:28:56.929+05:30  INFO 3868 --- [UserOrchestrationAPI] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-22T17:28:57.019+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] c.e.u.UserOrchestrationApiApplication    : Starting UserOrchestrationApiApplication using Java 23.0.1 with PID 3868 (C:\Users\user\IdeaProjects\UserOrchestrationAPI\target\classes started by user in C:\Users\user\IdeaProjects\UserOrchestrationAPI)
+2025-02-22T17:28:57.019+05:30 DEBUG 3868 --- [UserOrchestrationAPI] [restartedMain] c.e.u.UserOrchestrationApiApplication    : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-22T17:28:57.019+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] c.e.u.UserOrchestrationApiApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-02-22T17:28:57.286+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-22T17:28:57.287+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2025-02-22T17:28:57.555+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-22T17:28:57.556+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-22T17:28:57.557+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-22T17:28:57.578+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-22T17:28:57.579+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 556 ms
+2025-02-22T17:28:57.695+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-02-22T17:28:57.698+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2025-02-22T17:28:57.698+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-02-22T17:28:57.704+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-22T17:28:57.707+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-22T17:28:57.718+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-22T17:28:57.719+05:30  WARN 3868 --- [UserOrchestrationAPI] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-22T17:28:57.721+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-22T17:28:57.736+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-22T17:28:57.736+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-22T17:28:57.885+05:30  WARN 3868 --- [UserOrchestrationAPI] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-22T17:28:58.630+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-02-22T17:28:58.739+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-22T17:28:58.755+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-22T17:28:58.759+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] c.e.u.UserOrchestrationApiApplication    : Started UserOrchestrationApiApplication in 1.772 seconds (process running for 53.632)
+2025-02-22T17:28:58.761+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-02-22T17:29:00.166+05:30  INFO 3868 --- [UserOrchestrationAPI] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 21 class path changes (21 additions, 0 deletions, 0 modifications)
+2025-02-22T17:29:00.167+05:30  INFO 3868 --- [UserOrchestrationAPI] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-22T17:29:00.171+05:30  INFO 3868 --- [UserOrchestrationAPI] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-22T17:29:00.174+05:30  INFO 3868 --- [UserOrchestrationAPI] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-22T17:29:00.175+05:30  WARN 3868 --- [UserOrchestrationAPI] [Thread-7] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2025-02-22T17:29:00.175+05:30  INFO 3868 --- [UserOrchestrationAPI] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-02-22T17:29:00.175+05:30  INFO 3868 --- [UserOrchestrationAPI] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-02-22T17:29:00.239+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] c.e.u.UserOrchestrationApiApplication    : Starting UserOrchestrationApiApplication using Java 23.0.1 with PID 3868 (C:\Users\user\IdeaProjects\UserOrchestrationAPI\target\classes started by user in C:\Users\user\IdeaProjects\UserOrchestrationAPI)
+2025-02-22T17:29:00.239+05:30 DEBUG 3868 --- [UserOrchestrationAPI] [restartedMain] c.e.u.UserOrchestrationApiApplication    : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-22T17:29:00.240+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] c.e.u.UserOrchestrationApiApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-02-22T17:29:00.406+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-22T17:29:00.414+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 1 JPA repository interface.
+2025-02-22T17:29:00.554+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-22T17:29:00.554+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-22T17:29:00.555+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-22T17:29:00.581+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-22T17:29:00.581+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 340 ms
+2025-02-22T17:29:00.700+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-02-22T17:29:00.702+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:testdb user=SA
+2025-02-22T17:29:00.702+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-02-22T17:29:00.710+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-22T17:29:00.712+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-22T17:29:00.718+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-22T17:29:00.719+05:30  WARN 3868 --- [UserOrchestrationAPI] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-22T17:29:00.719+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-22T17:29:00.750+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-22T17:29:00.752+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-22T17:29:01.048+05:30  WARN 3868 --- [UserOrchestrationAPI] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-22T17:29:01.612+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-02-22T17:29:01.732+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-22T17:29:01.790+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-22T17:29:01.795+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] c.e.u.UserOrchestrationApiApplication    : Started UserOrchestrationApiApplication in 1.576 seconds (process running for 56.668)
+2025-02-22T17:29:01.797+05:30  INFO 3868 --- [UserOrchestrationAPI] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-02-22T17:29:01.799+05:30  WARN 3868 --- [UserOrchestrationAPI] [restartedMain] i.g.r.spring6.fallback.FallbackExecutor  : No fallback method match found
+
+java.lang.NoSuchMethodException: void class com.example.userorchestrationapi.services.UserServiceImpl.fallbackGetUsers(,class java.lang.Throwable)
+	at io.github.resilience4j.spring6.fallback.FallbackMethod.create(FallbackMethod.java:97) ~[resilience4j-spring6-2.2.0.jar:2.2.0]
+	at io.github.resilience4j.spring6.fallback.FallbackExecutor.execute(FallbackExecutor.java:31) ~[resilience4j-spring6-2.2.0.jar:2.2.0]
+	at io.github.resilience4j.spring6.retry.configure.RetryAspect.retryAroundAdvice(RetryAspect.java:117) ~[resilience4j-spring6-2.2.0.jar:2.2.0]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:638) ~[spring-aop-6.2.2.jar:6.2.2]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:628) ~[spring-aop-6.2.2.jar:6.2.2]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71) ~[spring-aop-6.2.2.jar:6.2.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:173) ~[spring-aop-6.2.2.jar:6.2.2]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.2.2.jar:6.2.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.2.jar:6.2.2]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727) ~[spring-aop-6.2.2.jar:6.2.2]
+	at com.example.userorchestrationapi.services.UserServiceImpl$$SpringCGLIB$$0.loadUsers(<generated>) ~[classes/:na]
+	at com.example.userorchestrationapi.event.StartupEventListener.callApiOnStartup(StartupEventListener.java:23) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:382) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:254) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:173) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:454) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.boot.context.event.EventPublishingRunListener.ready(EventPublishingRunListener.java:109) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$ready$6(SpringApplicationRunListeners.java:80) ~[spring-boot-3.4.2.jar:3.4.2]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplicationRunListeners.ready(SpringApplicationRunListeners.java:80) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:332) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.2.jar:3.4.2]
+	at com.example.userorchestrationapi.UserOrchestrationApiApplication.main(UserOrchestrationApiApplication.java:18) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.4.2.jar:3.4.2]
+
+2025-02-22T17:29:01.801+05:30  WARN 3868 --- [UserOrchestrationAPI] [restartedMain] i.g.r.spring6.fallback.FallbackExecutor  : No fallback method match found
+
+java.lang.NoSuchMethodException: void class com.example.userorchestrationapi.services.UserServiceImpl.fallbackGetUsers(,class java.lang.Throwable)
+	at io.github.resilience4j.spring6.fallback.FallbackMethod.create(FallbackMethod.java:97) ~[resilience4j-spring6-2.2.0.jar:2.2.0]
+	at io.github.resilience4j.spring6.fallback.FallbackExecutor.execute(FallbackExecutor.java:31) ~[resilience4j-spring6-2.2.0.jar:2.2.0]
+	at io.github.resilience4j.spring6.circuitbreaker.configure.CircuitBreakerAspect.circuitBreakerAroundAdvice(CircuitBreakerAspect.java:109) ~[resilience4j-spring6-2.2.0.jar:2.2.0]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:638) ~[spring-aop-6.2.2.jar:6.2.2]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:628) ~[spring-aop-6.2.2.jar:6.2.2]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71) ~[spring-aop-6.2.2.jar:6.2.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:173) ~[spring-aop-6.2.2.jar:6.2.2]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89) ~[spring-aop-6.2.2.jar:6.2.2]
+	at io.github.resilience4j.retry.Retry.lambda$decorateCheckedSupplier$1(Retry.java:135) ~[resilience4j-retry-2.2.0.jar:2.2.0]
+	at io.github.resilience4j.retry.Retry.executeCheckedSupplier(Retry.java:350) ~[resilience4j-retry-2.2.0.jar:2.2.0]
+	at io.github.resilience4j.spring6.retry.configure.RetryAspect.handleDefaultJoinPoint(RetryAspect.java:175) ~[resilience4j-spring6-2.2.0.jar:2.2.0]
+	at io.github.resilience4j.spring6.retry.configure.RetryAspect.proceed(RetryAspect.java:132) ~[resilience4j-spring6-2.2.0.jar:2.2.0]
+	at io.github.resilience4j.spring6.retry.configure.RetryAspect.lambda$retryAroundAdvice$0(RetryAspect.java:116) ~[resilience4j-spring6-2.2.0.jar:2.2.0]
+	at io.github.resilience4j.spring6.fallback.FallbackExecutor.execute(FallbackExecutor.java:37) ~[resilience4j-spring6-2.2.0.jar:2.2.0]
+	at io.github.resilience4j.spring6.retry.configure.RetryAspect.retryAroundAdvice(RetryAspect.java:117) ~[resilience4j-spring6-2.2.0.jar:2.2.0]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:638) ~[spring-aop-6.2.2.jar:6.2.2]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:628) ~[spring-aop-6.2.2.jar:6.2.2]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71) ~[spring-aop-6.2.2.jar:6.2.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:173) ~[spring-aop-6.2.2.jar:6.2.2]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.2.2.jar:6.2.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.2.jar:6.2.2]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727) ~[spring-aop-6.2.2.jar:6.2.2]
+	at com.example.userorchestrationapi.services.UserServiceImpl$$SpringCGLIB$$0.loadUsers(<generated>) ~[classes/:na]
+	at com.example.userorchestrationapi.event.StartupEventListener.callApiOnStartup(StartupEventListener.java:23) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:382) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:254) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:173) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:454) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.boot.context.event.EventPublishingRunListener.ready(EventPublishingRunListener.java:109) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$ready$6(SpringApplicationRunListeners.java:80) ~[spring-boot-3.4.2.jar:3.4.2]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplicationRunListeners.ready(SpringApplicationRunListeners.java:80) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:332) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.2.jar:3.4.2]
+	at com.example.userorchestrationapi.UserOrchestrationApiApplication.main(UserOrchestrationApiApplication.java:18) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.4.2.jar:3.4.2]
+
+2025-02-22T17:29:02.540+05:30  INFO 3868 --- [UserOrchestrationAPI] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-22T17:29:02.547+05:30  INFO 3868 --- [UserOrchestrationAPI] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-22T17:29:02.550+05:30  INFO 3868 --- [UserOrchestrationAPI] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-22T17:29:02.553+05:30  WARN 3868 --- [UserOrchestrationAPI] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2025-02-22T17:29:02.553+05:30  INFO 3868 --- [UserOrchestrationAPI] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-02-22T17:29:02.554+05:30  INFO 3868 --- [UserOrchestrationAPI] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.

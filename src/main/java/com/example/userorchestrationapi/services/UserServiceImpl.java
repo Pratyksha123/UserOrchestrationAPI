@@ -6,12 +6,15 @@ import com.example.userorchestrationapi.Models.User;
 import com.example.userorchestrationapi.dtos.OuterDTO;
 import com.example.userorchestrationapi.dtos.UserDTO;
 import com.example.userorchestrationapi.repositories.UserRepository;
+import org.springframework.cache.annotation.Cacheable;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.retry.annotation.Retry;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +39,9 @@ public class UserServiceImpl implements UserService {
         this.restTemplate = restTemplate;
     }
 
+    @Cacheable(value = "users")
+    @CircuitBreaker(name = "userService", fallbackMethod = "fallbackGetUsers")
+    @Retry(name = "userService", fallbackMethod = "fallbackGetUsers")
     public void loadUsers() {
         OuterDTO outerDto = null;
         int retryAttempts = retryConfig; // Store retry value in a local variable to avoid unintended side effects.
