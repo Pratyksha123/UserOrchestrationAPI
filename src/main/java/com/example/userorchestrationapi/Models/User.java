@@ -35,12 +35,13 @@ public class User {
         // no-arg constructor
     }
 
-    public User(int id, String firstName, String lastName, String email, String ssn) {
+    public User(int id, String firstName, String lastName, String email, String ssn,String image) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.ssn = ssn;
+        this.image = image;
     }
 
     public int getId() {

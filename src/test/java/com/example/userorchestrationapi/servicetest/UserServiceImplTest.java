@@ -53,7 +53,7 @@ class UserServiceImplTest {
     void testFindUserByEmail_UserNotFound() {
         when(userRepository.findByEmail("test@example.com")).thenReturn(Optional.empty());
         Exception exception = assertThrows(RuntimeException.class, () -> userService.findUserByEmail("test@example.com"));
-        assertEquals("User not found", exception.getMessage());
+        assertEquals("User not found with the given email", exception.getMessage());
     }
 
     @Test
@@ -70,6 +70,6 @@ class UserServiceImplTest {
     void testSearchByNameOrSsnPrefix_UserNotFound() {
         when(userRepository.searchByNameOrSsnPrefix("Unknown")).thenReturn(Arrays.asList());
         Exception exception = assertThrows(RuntimeException.class, () -> userService.searchByNameOrSsnPrefix("Unknown"));
-        assertEquals("No user found with the given prefix", exception.getMessage());
+        assertEquals("No users found with the given prefix", exception.getMessage());
     }
 }

@@ -1,79 +1,103 @@
 package com.example.userorchestrationapi.services;
 
-import ch.qos.logback.core.pattern.parser.OptionTokenizer;
+import com.example.userorchestrationapi.Exception.ExternalApiException;
+import com.example.userorchestrationapi.Exception.UserNotFoundException;
 import com.example.userorchestrationapi.Models.User;
 import com.example.userorchestrationapi.dtos.OuterDTO;
 import com.example.userorchestrationapi.dtos.UserDTO;
 import com.example.userorchestrationapi.repositories.UserRepository;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+
 @Service
 public class UserServiceImpl implements UserService {
-    //private static final String EXTERNAL_API_URL = "https://dummyjson.com/users";
+    private static final Logger logger = LogManager.getLogger(UserServiceImpl.class);
 
-    UserRepository userRepository;
+    @Value("${external.users.url}")
+    private String usersApiUrl;
 
-    RestTemplate restTemplate;
+    @Value("${external.users.api.retry}")
+    private int retryConfig;
+
+    private final UserRepository userRepository;
+    private final RestTemplate restTemplate;
 
     public UserServiceImpl(UserRepository userRepository, RestTemplate restTemplate) {
         this.userRepository = userRepository;
         this.restTemplate = restTemplate;
     }
 
-
     public void loadUsers() {
-        // Fetch users from the external API
-        OuterDTO outerdto = restTemplate.getForObject("https://dummyjson.com/users", OuterDTO.class);
+        OuterDTO outerDto = null;
+        int retryAttempts = retryConfig; // Store retry value in a local variable to avoid unintended side effects.
 
-        if (outerdto != null) {
+        while (retryAttempts > 0) {
+            try {
+                retryAttempts--;
+                outerDto = restTemplate.getForObject(usersApiUrl, OuterDTO.class);
 
-            List<User> listOfUsers = new ArrayList<>();
-            for (UserDTO userdto : outerdto.getUsers()) {
-                // Save each user into the in-memory H2 database
-                User user = convertUserDTOToUserAndSave(userdto);
-                listOfUsers.add(user);
+                if (outerDto != null && outerDto.getUsers() != null) {
+                    List<User> userList = new ArrayList<>();
+                    for (UserDTO userDto : outerDto.getUsers()) {
+                        User user = convertUserDTOToUser(userDto);
+                        userList.add(user);
+                    }
+                    userRepository.saveAll(userList);
+                    logger.info("Successfully loaded {} users into the database.", userList.size());
+                    return; // Exit loop on success
+                }
+
+            } catch (RestClientException e) {
+                logger.error("Error fetching users from external API. Attempts remaining: {}", retryAttempts, e);
             }
-            userRepository.saveAll(listOfUsers);
-
         }
-        else {
-            System.out.println("No user found");
+        if(outerDto == null || outerDto.getUsers() == null){
+            logger.error("Failed to load users from external API after {} attempts.", retryConfig);
+            throw new ExternalApiException("Failed to load users from external API after " + retryConfig + " attempts");
         }
     }
 
-    private User convertUserDTOToUserAndSave(UserDTO userdto){
-        User user = new User();
-        user.setId(userdto.getId());
-        user.setFirstName(userdto.getFirstName());
-        user.setLastName(userdto.getLastName());
-        user.setEmail(userdto.getEmail());
-        user.setSsn(userdto.getSsn());
-        user.setImage(userdto.getImage());
-        return user;
+    private User convertUserDTOToUser(UserDTO userDto) {
+        return new User(
+                userDto.getId(),
+                userDto.getFirstName(),
+                userDto.getLastName(),
+                userDto.getEmail(),
+                userDto.getSsn(),
+                userDto.getImage()
+        );
     }
 
+    @Override
     public User findUserByEmail(String email) {
-        Optional<User> user = userRepository.findByEmail(email);
-        if(user.isEmpty()){
-            throw new RuntimeException("User not found");
+        logger.info("Fetching user by email: {}", email);
+        Optional<User> user =  userRepository.findByEmail(email);
+        if(user.isEmpty()) {
+            logger.error("User not found with the given email: {}", email);
+            throw new UserNotFoundException("User not found with the given email");
         }
         return user.get();
+
     }
 
     @Override
     public List<User> searchByNameOrSsnPrefix(String prefix) {
+        logger.info("Searching users by prefix: {}", prefix);
         List<User> users = userRepository.searchByNameOrSsnPrefix(prefix);
-        if(users.isEmpty()){
-            throw new RuntimeException("No user found with the given prefix");
+
+        if (users.isEmpty()) {
+            logger.error("No users found with the given prefix: {}", prefix);
+            throw new UserNotFoundException("No users found with the given prefix");
         }
         return users;
     }
-
-
 }
