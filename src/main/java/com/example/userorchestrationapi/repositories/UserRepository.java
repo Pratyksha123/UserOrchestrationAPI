@@ -14,7 +14,8 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     Optional<User> findByEmail(String email);
 
-    @Query("SELECT e FROM User e WHERE e.firstName LIKE CONCAT(:prefix, '%') OR e.lastName LIKE CONCAT(:prefix, '%') OR e.ssn LIKE CONCAT(:prefix, '%')")
+    //@Query("SELECT e FROM User e WHERE e.firstName LIKE CONCAT(:prefix, '%') OR e.lastName LIKE CONCAT(:prefix, '%') OR e.ssn LIKE CONCAT(:prefix, '%')")
+    @Query("SELECT e FROM User e WHERE LOWER(e.firstName) LIKE LOWER(CONCAT(:prefix, '%')) OR LOWER(e.lastName) LIKE LOWER(CONCAT(:prefix, '%')) OR e.ssn LIKE CONCAT(:prefix, '%')")
     List<User> searchByNameOrSsnPrefix(@Param("prefix") String prefix);
 
 

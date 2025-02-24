@@ -47,7 +47,7 @@ class UserControllerTest {
         List<User> users = Arrays.asList(user);
         when(userService.searchByNameOrSsnPrefix("Test"))
                 .thenReturn(users);
-        ResponseEntity<List<User>> response = userController.searchByNamePrefix("Test");
+        ResponseEntity<List<User>> response = userController.searchByNameOrSsnPrefix("Test");
         assertEquals(200, response.getStatusCodeValue());
         assertEquals(1, response.getBody().size());
         assertEquals("Test User", response.getBody().get(0).getFirstName());
